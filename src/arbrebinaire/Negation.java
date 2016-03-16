@@ -5,4 +5,9 @@ public class Negation extends OperateurUnaire{
 		super("-", n);
 	}
 
+	@Override
+	public void accept(Visiteur v) {
+		v.visiterOperateurUnaire(this);
+	}
+
 }

@@ -11,10 +11,9 @@ public class ExpressionArithmetique {
 		return racine;
 	}
 
-	public void afficherPostFixe() {
-		System.out.println("\n postfixe:");
-		// TODO 
-		
+	public void afficherPostFixe(Visiteur v) {
+		System.out.println("\n postfixe:"); 
+		this.racine.accept(v);
 	}
 
 	public int calculerValeur() {
