@@ -8,9 +8,6 @@ public class Multiplication extends OperateurBinaire{
 
 	@Override
 	public void accept(Visiteur v) {
-		v.visiterOperateurBinaire(this);
+		v.visiterOperateurMultiplication(this);
 	}
-
-	
-
 }

@@ -5,8 +5,6 @@ import arbrebinaire.Constante;
 import arbrebinaire.ExpressionArithmetique;
 import arbrebinaire.Multiplication;
 import arbrebinaire.Negation;
-import arbrebinaire.Visiteur;
-import arbrebinaire.VisiteurPostfixe;
 
 public class TestArbreBinaire {
 
@@ -20,17 +18,10 @@ public class TestArbreBinaire {
 					new Negation(new Constante(4)));
 		ExpressionArithmetique exp = new ExpressionArithmetique(racine);
 
-		Visiteur v = new VisiteurPostfixe();
-		
-		exp.afficherInFixe();
-		System.out.println("\n calcul valeur: " + exp.calculerValeur());
+		exp.afficherPostFixe();
+		System.out.println("\n\n calcul valeur: " + exp.calculerValeur());
 		System.out.println("\n calcul hauteur: " + exp.calculerHauteur());
-		exp.afficherPostFixe(v);
+		exp.afficherInFixe();
 		
-		
-
 	}
-
-	
-
 }

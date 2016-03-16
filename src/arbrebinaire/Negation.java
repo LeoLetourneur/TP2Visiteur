@@ -7,7 +7,7 @@ public class Negation extends OperateurUnaire{
 
 	@Override
 	public void accept(Visiteur v) {
-		v.visiterOperateurUnaire(this);
+		v.visiterOperateurNegation(this);
 	}
 
 }

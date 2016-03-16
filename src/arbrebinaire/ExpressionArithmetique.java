@@ -11,24 +11,30 @@ public class ExpressionArithmetique {
 		return racine;
 	}
 
-	public void afficherPostFixe(Visiteur v) {
-		System.out.println("\n postfixe:"); 
-		this.racine.accept(v);
+	public void afficherPostFixe() {
+		VisiteurPostfixe pf = new VisiteurPostfixe();
+		System.out.print("\n postfixe: "); 
+		this.racine.accept(pf);
 	}
 
 	public int calculerValeur() {
-		// TODO 
-		return 0;
+		VisiteurValeur v = new VisiteurValeur();
+		this.racine.accept(v);
+		return v.getValue();
 	}
 
 	public int calculerHauteur() {
-		// TODO 
-		return 0;
+		VisiteurHauteur h = new VisiteurHauteur();
+		h.setCourante(0);
+		h.setMax(0);
+		this.racine.accept(h);
+		return h.getMax();
 	}
+	
 	public void afficherInFixe() {
-		System.out.println("\n infixe:");
-		// TODO 
-		
+		VisiteurInfixe vi = new VisiteurInfixe();
+		System.out.print("\n infixe: ");
+		this.racine.accept(vi);
 	}
 	
 }

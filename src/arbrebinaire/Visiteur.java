@@ -4,8 +4,9 @@ public interface Visiteur {
 	
 	public void visiterConstante(Constante c);
 	
-	public void visiterOperateurUnaire(OperateurUnaire u);
+	public void visiterOperateurNegation(Negation n);
 	
-	public void visiterOperateurBinaire(OperateurBinaire b);
+	public void visiterOperateurAddition(Addition a);
 
+	public void visiterOperateurMultiplication(Multiplication m);
 }

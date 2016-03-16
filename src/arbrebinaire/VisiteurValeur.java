@@ -1,30 +1,38 @@
 package arbrebinaire;
 
-public class VisiteurPostfixe implements Visiteur {
+public class VisiteurValeur implements Visiteur {
+
+	private int value;
+	public int getValue() {
+		return value;
+	}
 
 	@Override
 	public void visiterConstante(Constante c) {
-		System.out.print(c.getValeur());
+		value = c.getValeur();
 	}
 
 	@Override
 	public void visiterOperateurNegation(Negation n) {
 		n.getOpG().accept(this);
-		System.out.print(n.getOp());
+		value = -value;
 	}
 
 	@Override
 	public void visiterOperateurAddition(Addition a) {
+		int temp;
 		a.getOpG().accept(this);
+		temp = value;
 		a.getOpD().accept(this);
-		System.out.print(a.getOp());
+		value = temp + value;
 	}
 
 	@Override
 	public void visiterOperateurMultiplication(Multiplication m) {
+		int temp;
 		m.getOpG().accept(this);
+		temp = value;
 		m.getOpD().accept(this);
-		System.out.print(m.getOp());
+		value = temp * value;
 	}
-
 }
