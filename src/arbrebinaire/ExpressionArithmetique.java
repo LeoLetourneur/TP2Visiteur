@@ -25,8 +25,6 @@ public class ExpressionArithmetique {
 
 	public int calculerHauteur() {
 		VisiteurHauteur h = new VisiteurHauteur();
-		h.setCourante(0);
-		h.setMax(0);
 		this.racine.accept(h);
 		return h.getMax();
 	}

@@ -1,7 +1,15 @@
 package arbrebinaire;
 
+/**
+ * Interface Visiteur infixe
+ * @author GERLAND - LETOURNEUR
+ */
 public class VisiteurInfixe implements Visiteur {
 
+	/**
+	 * Parenthese permet de savoir combien de parenthèse sont ouvertes
+	 * dans le cas où une addition est prioritaire sur une multiplication
+	 */
 	private int parenthese = 0;
 	
 	@Override

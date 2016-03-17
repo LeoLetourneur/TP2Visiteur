@@ -1,5 +1,9 @@
 package arbrebinaire;
 
+/**
+ * Interface Visiteur postfixe
+ * @author GERLAND - LETOURNEUR
+ */
 public class VisiteurPostfixe implements Visiteur {
 
 	@Override

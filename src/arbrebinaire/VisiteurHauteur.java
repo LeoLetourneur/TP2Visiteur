@@ -1,23 +1,23 @@
 package arbrebinaire;
 
+/**
+ * Interface Visiteur hauteur
+ * @author GERLAND - LETOURNEUR
+ */
 public class VisiteurHauteur implements Visiteur {
 
-	private int courante;
-	private int max;
+	/**
+	 * courante permet de retenir la hauteur au noeud courant
+	 */
+	private int courante = 0;
+	public int getCourante() { return courante; }
 	
-	public int getCourante() {
-		return courante;
-	}
-	public void setCourante(int courante) {
-		this.courante = courante;
-	}
-	public int getMax() {
-		return max;
-	}
-	public void setMax(int max) {
-		this.max = max;
-	}
-
+	/**
+	 * max permet de retenir la hauteur max dans l'arbre
+	 */
+	private int max = 0;
+	public int getMax() { return max; }
+	
 	@Override
 	public void visiterConstante(Constante c) {
 		courante += 1;

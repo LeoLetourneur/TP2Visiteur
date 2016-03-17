@@ -1,11 +1,16 @@
 package arbrebinaire;
 
+/**
+ * Interface Visiteur valeur
+ * @author GERLAND - LETOURNEUR
+ */
 public class VisiteurValeur implements Visiteur {
 
+	/**
+	 * Value permet de retenir la résultat courent
+	 */
 	private int value;
-	public int getValue() {
-		return value;
-	}
+	public int getValue() { return value; }
 
 	@Override
 	public void visiterConstante(Constante c) {
